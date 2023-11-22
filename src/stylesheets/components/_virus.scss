@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+.virus{
+    position: relative;
+    @include flex($align:center);
+    width: 100%;
+    figure{
+        width: 40px;
+        z-index: 0;
+        @include tablet{
+            width: 50px;
+        }
+        @include desktop{
+            width: 70px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        z-index: -1;
+        @include color-bg-opacity($number:196,$opacity:0.2);
+        @include font($primary-font,9px,$secondary-color,600);
+        text-wrap: nowrap;
+        padding: 5% 5%;
+        border-radius: 5px;
+        margin-left: -4%;
+        @include tablet{
+            @include font($primary-font,18px,$secondary-color,600);
+            padding: 3% 4%;
+        }
+        @include desktop{
+            @include font($primary-font,20px,$secondary-color,600);
+            padding: 2% 4%;
+        }
+    }
+}

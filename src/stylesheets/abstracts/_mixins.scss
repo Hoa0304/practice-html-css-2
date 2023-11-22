@@ -1,0 +1,91 @@
+@use './functions';
+@use './variables' as *;
+
+@mixin button($width:false,$height:false,$background-color:false,$border-radius:false,$border:false){
+    @if $width != false{
+        width: $width;
+    }
+    @if $height != false{
+        height: $height;
+    }
+    @if $background-color != false{
+        background-color: $background-color;
+    }
+    @if $border-radius != false{
+        border-radius: $border-radius;
+    }
+    @if $border!= false{
+        border: $border;
+    }
+    cursor: pointer;
+}
+
+@mixin font($font-family, $font-size,$color, $font-weight: normal,$line-height:normal) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin flex(
+  $display: flex,
+  $direction: false,
+  $justify: false,
+  $align: false,
+  $wrap: false,
+  $gap: false
+) {
+  display: $display;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin bg-color($color) {
+    background-color: $color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin bg-img($bg: "") {
+  background-image: url($bg);
+  background-size: cover;
+  background-clip: border-box;
+}
+@mixin color-text-opacity($number,$opacity){
+color:rgba($number,$number,$number,$opacity);
+}
+@mixin color-bg-opacity($number, $opacity) {
+  background-color: rgba($number, $number, $number, $opacity);
+}
+
+  @mixin tablet {
+    @media (min-width:$medium) and (max-width: $tablet) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+  @mixin res($min,$max){
+    @media screen and (min-width:$min) and (max-width:$max) {
+      @content;   
+    }
+  }
+  

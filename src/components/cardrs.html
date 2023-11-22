@@ -1,0 +1,12 @@
+<each loop="item in {{list}}">
+    <article class="cardrs">
+        <figure class="cardrs__image">
+            <img src="../assets/icons/{{item.imagelink}}.svg" alt="icon">
+        </figure>      
+        <p class="cardrs__text">
+            {{ item.captions }}
+
+        </p>
+                <a href="#" class="cardrs__link">Read More <figure><img src="../assets/icons/arrowRightWhite.svg" alt="arrow"></figure></a>
+    </article>
+</each>

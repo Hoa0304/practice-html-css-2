@@ -1,0 +1,220 @@
+@use "../abstracts/" as *;
+
+.header {
+    width: 100%;
+    @include flex($direction: column,$justify:center,$align:center);
+    &__top {
+        width: 100%;
+        margin-top: 10%;
+        @include flex($direction: row,$justify: space-between,$align:center);
+        @include desktop {
+            margin-top: 0%;
+        }
+
+        &--mobile {
+            display: none;
+            @include desktop {
+                @include flex($justify:center,$align:flex-start);
+               
+            }
+        }
+
+        &--menu {
+            border-radius: 25%;
+            @include color-bg-opacity(196,0.15);
+            padding: 2%;
+            @include flex($justify:center,$align:center);
+            @include button();
+            &:hover {
+                background-color: $secondary-color;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+
+        &--logo {
+            position: relative;
+            @include font($secondary-font,18px,$primary-color);
+            &::after {
+                content: "";
+                position: absolute; 
+                width: 40%;
+                border:2px solid $secondary-color;
+                bottom: -25%;
+                left: 0;
+                border-radius: 10px;
+                @include desktop{
+                    bottom: -10%;
+                }
+            }
+            @include tablet {
+                @include font($secondary-font,25px,$primary-color);
+            }
+            @include desktop {
+                @include font($secondary-font,32px,$primary-color,700);
+            }
+        }
+        
+        &--check {
+            display: none;
+            @include desktop {
+                display: inline;
+                padding: 1.5% 2%;
+                box-shadow: 0 3px 3px  #111111;
+                &-text {
+                    @include font($secondary-font,24px,$secondary-color);
+                }
+                @include button ($background-color: rgba(196, 196, 196, 0.10),$border-radius: pxToRem(20))
+            }
+            &:hover{
+                background-color: $secondary-color;
+                a {
+                    @include font($secondary-font,24px,$primary-color);
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100% ;
+        margin-top: 8%;
+        @include flex($direction: column,$justify:space-between);
+        @include tablet {
+            margin-top: 5%;
+        }
+        @include desktop {
+            @include flex($direction:row,$justify:space-between,$align:flex-start);
+            margin-top: 5%;
+            gap:4%;
+        }
+        &--content {
+            @include flex($direction:column,$justify: center,$align:flex-start);
+            @include desktop{
+                width: 60%;
+            }
+            .text {
+                &--secondary--small{
+                    @include font($secondary-font,12px,$secondary-color);
+                    @include tablet {
+                        @include font($secondary-font,18px,$secondary-color);
+                    }
+                    @include desktop{
+                        @include font($secondary-font,24px,$secondary-color);
+                    }
+                }
+                &--primary{
+                    @include font($secondary-font,24px,$primary-color,600);
+                    margin-top: 6%;
+                    width: 90%;
+                    @include tablet {
+                        @include font($secondary-font,36px,$primary-color,800);
+                        width: 70%;
+                    }
+                    @include desktop{
+                        @include font($secondary-font,48px,$primary-color,800);
+                        width: 80%;
+                    }
+                }
+                &--secondary {
+                    @include font($secondary-font,24px,$secondary-color,600);
+                    margin-bottom: 6%;
+                    @include tablet {
+                        @include font($secondary-font,36px,$secondary-color,800);
+                        width: 70%;
+                    }
+                    @include desktop {
+                        @include font($secondary-font,48px,$secondary-color,800);
+                        width: 30%;
+                    }
+                }
+                &--opacity {
+                    @include font($primary-font,14px,rgba(255, 255, 255, 0.70),700);
+                    margin-bottom: 12%;
+                    @include tablet {
+                        @include font($primary-font,20px,rgba(255, 255, 255, 0.70),800);
+                        width: 70%;
+                        margin-bottom: 7%;
+                    }
+                    @include desktop {
+                        @include font($primary-font,24px,rgba(255, 255, 255, 0.70),800);
+                        width: 80%;
+                        margin-bottom: 7%;
+                    }
+                }
+            }
+
+            .button {
+                @include flex($direction: row);
+                gap: pxToRem(20);
+                &--text {
+                    @include font($primary-font,14px,$primary-color,700);
+                    @include tablet {
+                        @include font($primary-font,20px,$primary-color,700);
+                    }
+                    @include desktop {
+                        @include font($primary-font,24px,$primary-color,700);
+                    }
+                }   
+                button:hover {
+                    box-shadow: 0 2px 8px 2px #000;
+                    background-color: $secondary-color;
+                }
+                &--vaccine {
+                    @include button($background-color: $secondary-color,$border-radius: pxToRem(20));
+                    padding: 7% 12%;
+                    text-wrap: nowrap;
+
+                }
+                &--center {
+                    @include button($background-color: rgba(196, 196, 196, 0.10),$border-radius: pxToRem(20),$border: pxToRem(1) solid $secondary-color);
+                    padding: 7% 12%;
+                    text-wrap: nowrap;
+                }
+            }
+        }
+
+        &--image {
+            width: 100%;
+            margin-top: 15%;
+            position: relative;
+            @include desktop{
+                margin-top: 0;
+                width: 50%;
+            }
+            @include flex($direction: column,$align:center);
+            &-figure{
+                width: 100%;
+                @include flex($justify:flex-end);
+                img{
+                    width: 100%;
+                }
+                img:nth-child(3) {
+                    @include tablet {
+                        display: none;
+                    }
+                    @include desktop {
+                        display: none;
+                    }
+                }
+                img:nth-child(1){
+                    display: none;
+                    @include desktop {
+                        display: block;
+                        width:100%;
+                    }
+                   
+                }
+                img:nth-child(2){
+                    display: none;
+                    @include tablet{
+                        display: block;
+                    }
+                    @include desktop{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

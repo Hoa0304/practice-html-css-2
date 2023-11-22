@@ -1,0 +1,8 @@
+<each loop="item in {{list}}">
+    <div class="divvirus">
+        <include src="./components/virus.html" locals='{
+            "list":["{{item.contentfist}}","{{item.contentsecond}}"]
+        }'>         
+        </include>
+    </div>
+</each>

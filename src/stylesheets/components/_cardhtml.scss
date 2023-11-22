@@ -1,0 +1,77 @@
+@use "../abstracts/" as *;
+
+.cardhtml{
+    @include color-bg-opacity($number:196,$opacity:0.5);
+    padding: 8%;
+    border-radius: 14px;
+    @include tablet{
+        border-radius: 20px;
+    }
+    @include desktop{
+        border-radius: 20px;
+        padding: 3%;
+    }
+    &__information{
+        @include flex($align:center);
+        margin-bottom: 8%;
+        &-avt{
+            width: 20%;
+            margin-right: 5%;
+            img{
+                width: 100%;
+            }
+        }
+        &__text{
+            &-fistline{
+                @include font($secondary-font,14px,black,700);
+                @include tablet{
+                    @include font($secondary-font,20px,black,700);
+                }
+                @include desktop{
+                    @include font($secondary-font,24px,black,700);
+
+                }
+            }
+            &-secondline{
+                @include font($secondary-font,10px,700);
+                @include tablet{
+                    @include font($secondary-font,14px,700);
+                }
+                @include desktop{
+                    @include font($secondary-font,14px,700);
+                }
+                @include color-text-opacity($number:0,$opacity:0.5);
+            }
+        }
+
+    }
+    &__comment{
+        @include flex($align:center,$justify:center);
+        &-title{
+            text-align: center;
+            @include font($primary-font,12px,500);
+            @include color-text-opacity($number:0,$opacity:0.9);
+            width: 74%;
+            @include tablet{
+                @include font($primary-font,18px,500);
+            }
+            @include desktop{
+                @include font($primary-font,18px,500);
+                width: 95%;
+            }
+            span{
+                color: $secondary-color;
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 0 3px 10px 3px rgba(199, 192, 192, 0.9);
+        background-color: $secondary-color;
+       p{
+        color: $primary-color;
+       }
+       span{
+        color: $primary-color;
+       }
+    }
+}

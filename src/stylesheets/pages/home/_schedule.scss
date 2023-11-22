@@ -1,0 +1,115 @@
+@use "../../abstracts/" as *;
+
+    .schedule{
+    padding: 10% 0 0 0;
+    &__title{
+        margin-bottom: 10%;
+        @include tablet{
+         margin-bottom: 5%;
+        }
+        @include desktop{
+            margin-bottom: 2%;
+        }
+        @include flex($align:center);
+        &--clock{
+            @include color-bg-opacity($number:196,$opacity:0.1);
+            padding: 1%;
+            border-radius: 10px;
+        }
+        &--content{
+            margin-left: 3%;
+            @include font($primary-font,14px,$primary-color,700);
+            @include tablet{
+                @include font($primary-font,24px,$primary-color,700);
+            }
+            @include desktop{
+                @include font($primary-font,24px,$primary-color,700);
+            }
+        }
+    }
+    &__image{
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        padding: 8% 5% 3% 5% ;
+        border-radius: 20px 20px 0 0;
+        @include tablet{
+            padding: 4% 5%;
+        }
+        @include desktop{
+            padding: 4% 3%;
+        }
+        @include color-bg-opacity($number:196,$opacity:0.1);
+        &--icon{
+            width: 100%;
+            @include flex($direction:column,$gap:15px);
+            @include tablet{
+                @include flex($direction:row,$gap:0);
+                flex-wrap: wrap;
+                .child{
+                    width: max-content;
+                }
+                .child, .submit{
+                    flex-basis: 50%;
+
+                }
+                .child:nth-child(1), .child:nth-child(2){
+                    order: 1;
+                }
+                .child:nth-child(3), .submit{
+                    order: 2;
+                }
+
+                
+            }
+            // @include res($min:429px,$max:876px){
+            //      @include flex($direction:column);
+            // }
+            @include desktop{
+                @include flex($direction:row,$justify:space-between);
+            }
+            .submit{
+                margin-top: 4%;
+                border-radius: 15px ;
+                padding: 5% 5%;
+                width: 40%;
+                background-color: $secondary-color;
+                @include font($primary-font,14px,$primary-color,700);
+                @include tablet{
+                    @include font($primary-font,20px,$primary-color,700);
+                    border-radius: 30px;
+                    padding: 4% 0%;
+                    margin-top: 30px;
+                    width: 10%;
+                }
+                @include desktop{
+                    @include font($primary-font,24px,$primary-color,700);
+                    border-radius: 20px;
+                    padding: 0% 0%;
+                    margin-top: 0;
+                    width: 10%;
+                }
+            }
+        }
+        &--icon{
+            @include res($min:430px,$max:600px){
+                @include flex($direction:column);
+                .submit{
+                    padding: 5% 5%;
+                    width: 40%;
+                }
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            @include color-bg-opacity($number:196,$opacity:0.05);
+            width: 100%;          
+            border-radius: 20px 20px 0 0;
+            height: 105%;
+            top: -5%;
+            left: 0;
+            z-index: -2;
+        }
+    }
+}

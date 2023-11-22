@@ -1,0 +1,25 @@
+@use "../../abstracts/" as *;
+
+body {
+   @include bg-img("../assets/images/bgMobile.png");
+   @include tablet{
+      @include bg-img("../assets/images/bgTablet.png");
+   }
+   @include desktop{
+      @include bg-img("../assets/images/bgDesktop.png");
+   }
+}
+
+.main-container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 2% 5% 0 5%;
+}
+body{
+   width: 100%;
+   @include flex($direction:column);
+   margin: 0 auto;
+   min-width: 330px;
+   max-width: 1700px;
+}

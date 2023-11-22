@@ -1,0 +1,117 @@
+@use "../abstracts/"as *;
+
+.formformail{
+    position: absolute;
+    bottom: 80%;
+    transform: translateY(-70%);
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    @include flex($justify:center,$align:center);
+    .formmail{
+
+        border-radius: 10px;
+        width: 80%;
+        padding: 10%;
+        z-index: 0;
+        position: relative;
+        background-color: $secondary-color;
+        @include flex($direction:column,$align:center);
+        @include tablet{
+            border-radius: 50px;
+            width: 90%;
+            padding: 5% 10%;
+        }
+        @include desktop{
+            border-radius: 50px;
+            width: 70%;
+            padding: 5% 10%;
+        }
+        &__first{
+            @include font($secondary-font,18px,$primary-color,700);
+            margin-bottom: 5%;
+            @include tablet{
+                @include font($secondary-font,36px,$primary-color,700);
+            }
+            @include desktop{
+                @include font($secondary-font,48px,$primary-color,700);
+            }
+        }
+        &__second{
+            @include font($primary-font,10px,$primary-color,500);
+            margin-bottom: 10%;
+            @include tablet{
+                @include font($primary-font,20px,$primary-color,500);
+            }
+            @include desktop{
+                @include font($primary-font,24px,$primary-color,500);
+            }
+        }
+        .button{
+            width: 100%;
+            @include flex();
+            &-input{
+                width: 80%;
+                border: none;
+                border-radius: 20px 0 0 20px;
+                padding: 4% 0 4% 5%;
+                @include font($primary-font,10px,500);
+                @include tablet{
+                    @include font($primary-font,20px,500);  
+                }
+                @include desktop{
+                    @include font($primary-font,20px,500);
+                }
+                @include tablet{
+                    padding: 6%;
+                }
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+            
+            &-input::placeholder{
+                @include font($primary-font,10px,500);
+                @include color-text-opacity(0,0.25);
+                @include tablet{
+                    @include font($primary-font,20px,500);  
+                }
+                @include desktop{
+                    @include font($primary-font,20px,500);
+                }
+            }
+            &-btn{
+                width: 20%;
+                @include flex($align:center,$justify:center);
+                border: none;;
+                border-radius: 0 20px 20px 0;
+                background-color: black;
+                figure{
+                    width: 40%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10)
+        }
+      &::after{
+        content: "";
+        position: absolute;
+        z-index: -5;
+        width: 110%;
+        border-radius: 20px;
+        height: 120%;
+        bottom: -10%;
+        @include color-bg-opacity($number:196,$opacity:0.15);
+        @include tablet{
+            border-radius: 50px;
+        }
+        @include desktop{
+            border-radius: 50px;
+        }
+      }
+    }
+}

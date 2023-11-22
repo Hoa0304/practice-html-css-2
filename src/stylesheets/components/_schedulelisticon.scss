@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.child{
+    @include flex($align:center);
+    &__img{
+        @include color-bg-opacity($number:196,$opacity:0.1);
+        border-radius: 10px;
+        padding: 1%;
+        @include tablet{
+            padding: 2%;
+            border-radius: 15px;
+        }
+        @include desktop{
+            padding: 3%;
+        }
+    }
+    &__content{
+        @include flex($direction:column,$gap:1px);
+        margin-left: 3%;
+        &-first{
+            text-wrap: nowrap;
+            @include font($primary-font,14px,600);
+            @include color-text-opacity($number:255,$opacity:0.5);
+            @include tablet{
+                @include font($primary-font,20px,600);
+            }
+            @include desktop{
+                @include font($primary-font,24px,600);
+            }
+
+        }
+        &-secondary{
+            text-wrap: nowrap;
+            @include font($secondary-font,14px,700);
+            color: $primary-color;
+            @include tablet{
+                @include font($secondary-font,20px,700);
+            }
+            @include desktop{
+                @include font($secondary-font,24px,700);
+            }
+            
+        }
+    }
+}

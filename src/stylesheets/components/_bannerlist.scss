@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.banner{
+    width: 111%;
+    background-color: $primary-color;
+    @include flex($align:center,$justify:space-between );
+    transform: translateX(-4.9%);
+    padding: 2% 5%;
+    gap: 10px;
+    .banner-child{
+        img{
+            width: 100%;
+        }
+    }
+}

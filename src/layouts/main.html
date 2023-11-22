@@ -1,0 +1,201 @@
+<main>
+    <section class="schedule">
+        <div class="schedule__title">
+            <figure class="schedule__title--clock">
+                <img src="../assets/icons/clock.svg" alt="clock">
+            </figure>
+            <h5 class="schedule__title--content">Schedule your Vaccination</h5>
+        </div>
+        <div class="schedule__image">
+            <div class="schedule__image--icon">
+                <include src="./components/schedulelisticon.html" locals='{
+                    "list":[
+                    {"linkimage":"mapPin","alts":"location","firstcontent":"Location","secondarycontent":"Ikeja Lagos, Nigeria"},
+                    {"linkimage":"calendar","alts":"calendar","firstcontent":"Date","secondarycontent":"29 February, 2022"},
+                    {"linkimage":"shield","alts":"shield","firstcontent":"Vaccine Type","secondarycontent":"Mordena"}                     
+                    ]
+                }'>
+                    
+                </include>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <include src="./components/bannerlist.html" locals='{
+            "list":["moderna","Pfizer","astrazeneca","sinovac"]
+        }'>
+            
+        </include>
+    </section>
+    <section class="result">
+        <p class="result__title">
+            Check your COVID-19 result on our Database
+        </p>
+        <div class="result__form">
+            <form class="result__form--input">
+                <input class="top" type="text" placeholder="Okeowo">
+                <input class="bottom" type="text" placeholder="NIK Number">
+                <button class="button">
+                    <a class="button--text" href="#">
+                        Check
+                    </a>
+                </button>
+            </form>
+                <p class="result__form--question">
+                    Need a certificate for your COVID-19 result? 
+                
+               
+                    Please click 
+                    <a class="text" href="#">here</a>
+                </p>
+        </div>
+    </section>
+    <section class="reason">
+        <div class="reason__content">
+          <p class="reason__content-first">Why get vaccinated
+            today?</p>
+            <p class="reason__content-second">
+                <span>
+                    Magna adipiscing at elit at ornare lectus nibh lorem. 
+                </span>
+                <span>
+                    Ac, sed ac lorem pellentesque vestibulum risus matti. 
+                </span>
+                <span>
+                    In molestie condimentum malesuada non.
+                </span>
+            </p>
+        </div>
+        <div class="reason__card">
+            <article class="reason__card-big">
+                <figure class="reason__card-big__image">
+                    <img src="../assets/icons/shield.svg" alt="shield">
+                </figure>
+                <div class="reason__card-big__content">
+                    <p class="title-first">Protects your immune 
+                        system against viruses</p>
+                    <p class="title-second">
+                        <span>
+                            Velit ut consectetur mauris, orci amet, faucibus. 
+                        </span>
+                        <span>
+                            Sit turpis fringilla ipsum pretium, dictum. Dolor eget vel nulla lorem ac.</p>
+                        </span>
+                </div>
+                <a href="#" class="reason__card-big__link">Read More <figure><img src="../assets/icons/arrowRight.svg" alt="arrow"></figure></a>
+            </article>
+            <div class="reason__card-child">
+                <include src="./components/cardrs.html" locals='{
+                    "list":[{"imagelink":"people","captions":"Minimize the spread of the Virus"},
+                    {"imagelink":"key","captions":"Proctected yourself"}]
+                }'>
+                    
+                </include>
+            </div>
+        </div>
+    </section>
+    <section class="information">
+        <p class="information__title">
+           
+                Get your vaccine registration today
+           
+        </p>
+        <div class="information__image">
+            <figure>
+                <img src="../assets/images/group.png" alt="vcc">
+            </figure>
+            <button class="information__image-button">Verify Status</button>
+        </div>
+         <form action="" class="information__form">
+            <p class="information__form-first--text">Patient's Full Name</p>
+            <input type="text" class="information__form-input" placeholder="Full name">
+            <p class="information__form-first--text">Mobile Number</p>
+            <p class="information__form-second--text">Notifications for appointment and reminders will be sent to this provided number</p>
+            <div class="information__form-group">
+                <div class="information__form-group-input">
+                    <figure class="flag">
+                        <img src="../assets/icons/flag.svg" alt="flag">
+                    </figure>
+                    <figure class="arrow">
+                        <img src="../assets/icons/chevron-down.svg" alt="arrow">
+                    </figure>
+                    <input type="text" class="input-phonenum" placeholder="Phone number">
+                </div>
+                <button class="buttonvrf">Verify</button>
+            </div>
+           <button class="btn-submit">Submit</button>
+           <div class="information__form__ques">
+            <a href="#" class="ques ques-first">Already registered?</a>
+            <a href="#" class="ques ques-second">Check your status</a>
+           </div>
+        </form>
+    </section>
+    <section class="behavior">
+        <div class="behavior__content">
+            <p class="behavior__content__first-title">Covid-19 Prevention</p>
+            <p class="behavior__content__main-title"><span>COVID-19</span> Symptoms</p>
+            <p class="behavior__content__second-title"> 
+                <span>
+                    Adipiscing nec etiam tortor elit quisque.
+                </span>
+                <span>
+                    Arcu aliquet convallis aenean eu velit.
+                </span>
+                <span>
+                    Mi vestibulum, ullamcorper venenatis imperdiet augue arcu donec neque.</p>
+                </span>
+        </div>
+        <div class="virusBehaviorImage">
+            <figure class="imageperson--fg">
+                <img src="../assets/images/headache.webp" alt="Person" class="imageperson--svg">
+            </figure>
+            <div class="virusdescription">
+                <div class="grid">
+                   
+                    <include src="./components/imagelist.html" locals='{
+                        "list": "[`High Fever`,`Loss sense of taste`,`Dry Cough`,`Difficulty Breathing`,`Loss sense of smell`,`Sore Throat`]"
+                    }'></include>
+                    
+                </div>
+            </div>
+           
+    </div>
+    </section>
+    <section class="patient">
+        <div class="patient__content">
+            <p class="patient__content-fistline">FEEDBACK</p>
+            <p class="patient__content-secondline">What our Patients Think</p>
+            <p class="patient__content-thirdline">
+                <span>
+                    Adipiscing nec etiam tortor elit quisque.
+                </span>
+                <span>
+                Arcu aliquet convallis aenean eu velit.
+                </span>
+                <span>
+                    Mi vestibulum, ullamcorper venenatis imperdiet augue arcu donec neque.
+                </span>
+            </p>
+        </div>
+        <div class="patient__image">
+            <div class="patient__image__vc">
+                <include src="./components/covid.html" locals='{
+                    "list":["covid","covid","covid"]
+                }'>
+                    
+                </include>
+            </div>
+            <div class="patient__image__card">
+                <include src="./components/cardhtml.html" locals='{
+                    "list":[{"personlink":"F1","firstline":"Oyindamola Maja","secondline":"Badagry, Lagos","titlefirst":"\"Been stressing about a close centre to get the","titlespan":"covid-19","titlesecond":"vaccine, until i tried Vaccination.ng\""},
+                    {"personlink":"F2","firstline":"Okeowo Lekan","secondline":"Ikeja, Lagos","titlefirst":"\"Got my vaccine very close to my house.","titlespan":"","titlesecond":"Was very easy scheduling an appointment.\""},
+                    {"personlink":"F3","firstline":"Kafaru Temitope","secondline":"Obanikoro, Lagos","titlefirst":"\"Been stressing about a close centre to get the","titlespan":"covid-19","titlesecond":"vaccine, until i tried Vaccination.ng\""}]
+                }'>
+                    
+                </include>
+            </div>
+        </div>
+    </section>
+   
+</main>

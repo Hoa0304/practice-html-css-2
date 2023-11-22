@@ -1,0 +1,149 @@
+@use "../../abstracts/" as *;
+
+.result{
+    margin-top: 25%;
+    width: 100%;
+    @include color-bg-opacity($number:196,$opacity:0.1);
+    border-radius: 20px;
+    @include tablet{
+        margin-top: 10%;
+    }
+    @include desktop{
+        margin-top: 5%;
+    }
+    &__title{
+        padding: 5%;
+        text-align: center;
+        @include color-bg-opacity($number:196,$opacity:0.05);
+        border-radius: 10px 10px 0 0;
+        @include font($secondary-font,10px,$primary-color,700);
+        @include tablet{
+            border-radius: 20px 20px 0 0;
+            @include font($secondary-font,20px,$primary-color,700);
+        }
+        @include desktop{
+            border-radius: 20px 20px 0 0;
+            @include font($secondary-font,24px,$primary-color,700);
+            text-align: left;
+            padding: 2%;
+        }
+    }
+    &__form{
+        width: 100%;
+        padding: 8% 5%;
+        @include tablet{
+            padding: 8% 7%;
+        }
+        @include flex($direction:column);
+        @include desktop{
+             padding: 3% 10%;
+        }
+        &--input{
+            width: 100%;
+            @include flex($direction:column,$justify:center);
+            gap:15px;
+            margin-bottom: 15%;
+            @include tablet{
+                width: 90%;
+                gap: 25px;
+                transform: translateX(5%);
+            }
+            @include desktop{
+                @include flex($direction:row);
+                margin-bottom: 3%;
+            }
+            input{
+                padding: 5%;
+                border-radius: 10px;
+                border: 3px solid rgba(196,196,196,0.15);
+                @include color-bg-opacity($number:196,$opacity:0.1);
+                outline: none;
+                @include font($primary-font,12px,$primary-color,500);
+                @include tablet{
+                    @include font($primary-font,20px,$primary-color,500);
+                    border-radius: 20px;
+                }
+                @include desktop{
+                    width: 50%;
+                    padding: 0 2%;
+                    @include font($primary-font,24px,$primary-color,500);
+                    border-radius: 20px;
+                }
+            
+            }
+            .top{
+                border: 3px solid $secondary-color;
+                color: $primary-color;
+            }
+            .top.top::placeholder{
+                color: $primary-color;
+            }
+            input:focus{
+                border: 3px solid $secondary-color;
+            }
+            input:focus::placeholder{
+                 color: $primary-color;
+            }
+            button{
+                width: 45%;
+                padding: 5%;
+                border-radius: 10px;
+                @include color-bg-opacity($number:196,$opacity:0.1);
+                a{
+                    text-decoration: none;
+                    @include font($primary-font,14px,$primary-color,700);
+                    @include tablet{
+                        @include font($primary-font,20px,$primary-color,700);
+                    }
+                     @include desktop{
+                        @include font($primary-font,24px,$primary-color,700);
+                    }
+                }
+                @include tablet{
+                    border-radius: 20px;
+                }
+                @include desktop{
+                    width: 20%;
+                    padding: 2%;
+                    border-radius: 20px;
+                }
+            }
+            button:hover{
+                border: 3px solid $secondary-color;
+                a{
+                    color: $secondary-color;
+                }
+            }
+        }
+        &--question{
+            @include font($primary-font,10px,$secondary-color,700);
+            text-align: center;
+            padding: 5%;
+            @include color-bg-opacity($number:196,$opacity:0.05);
+            border-radius: 10px;
+            a{
+                @include font($primary-font,10px,$secondary-color,700);
+                text-decoration: underline;
+                @include tablet{
+                    @include font($primary-font,14px,$secondary-color,700);
+                    text-decoration: underline;
+                   }
+                   @include desktop{
+                    @include font($primary-font,24px,$secondary-color,700);
+                    text-decoration: underline;
+                   }
+
+            }
+           @include tablet{
+            padding: 3% 5%;
+            border-radius: 20px;
+            @include font($primary-font,14px,$secondary-color,700);
+           }
+           @include desktop{
+            padding: 1% 5%;
+            border-radius: 20px;
+            @include font($primary-font,24px,$secondary-color,700);
+           }
+        }
+    }
+}

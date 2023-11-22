@@ -1,0 +1,143 @@
+@use "../../abstracts/" as *;
+
+.behavior{
+    width: 100%;
+    padding: 10% 0 0 0;
+    @include flex($direction:column,$justify:center,$align:center);
+    gap: 15px;
+    @include tablet{
+        padding: 8% 0 0 0;
+    }
+    @include desktop{
+        padding: 5% 0 0 0;
+    }
+    &__content{
+        @include flex($direction:column,$justify:center,$align:center);
+        gap: 15px;
+        text-align: center;
+         &__first-title{
+            @include font($primary-font,12px,$primary-color,700);
+            @include tablet{
+                @include font($primary-font,20px,$primary-color,700);
+            }
+            @include desktop{
+                @include font($primary-font,24px,$primary-color,700);
+            }
+         }
+         &__main-title{
+            @include font($secondary-font,24px,$primary-color,800);
+            @include tablet{
+                @include font($secondary-font,36px,$primary-color,800);
+            }
+            @include desktop{
+                @include font($secondary-font,48px,$primary-color,800);
+            }
+            span{
+                color: $secondary-color;
+            }
+         }
+         &__second-title{
+            @include font($primary-font,12px,500);
+            @include tablet{
+                @include font($primary-font,18px,500);
+            }
+            @include desktop{
+                @include font($primary-font,24px,500);
+            }
+            @include color-text-opacity($number:255,$opacity:0.5);
+            width: 90%;
+            span{
+                display: block;
+                @include desktop{
+                    display: inline;
+                }
+            }
+         }
+    }
+    .virusBehaviorImage{
+        position: relative;
+        width: 100%;
+        @include flex($justify:center,$align:center);
+        .imageperson--fg{
+            .imageperson--svg{
+                width: 225px;
+                height: 170px;
+                @include tablet{
+                    width: 460px;
+                    height: 345px;
+                }
+                @include desktop{
+                    width: 710px;
+                    height: 550px;
+                }
+            }
+        }
+        .virusdescription{
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            .grid{
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+                .vd{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    .vdp{
+                        min-width: max-content;
+                        @include color-bg-opacity(196,0.2);
+                        height: 22px;
+                        border-radius: 5px;
+                        color: $secondary-color;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include font($primary-font,9px,600);
+                        @include tablet{
+                            @include font($primary-font,18px,600);
+                        }
+                        @include desktop{
+                            @include font($primary-font,20px,600);
+                        }
+                        line-height: normal;
+                        padding: 5% 5%;
+                        margin-left: -5%;
+                    }
+                    .virus--svg{
+                       height: 32px;
+                       width: 32px;
+                       @include tablet{
+                        height: 70px;
+                        width: 70px;
+                       }
+                       @include desktop{
+                        width: 100px;
+                        height: 100px;
+                       }
+                    }
+                }
+                .vd:nth-child(1){
+                    margin-left: 25%;
+                }
+                .vd:nth-child(2){
+                   margin-left: 0;
+                }
+                .vd:nth-child(3){
+                    margin-left: -10%;
+                }
+                .vd:nth-child(4){
+                     margin-left: 20%;
+                }
+                .vd:nth-child(5){
+                    margin-left: -20%;
+                }
+                .vd:nth-child(6){
+                    margin-left: 40%;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@use "../../abstracts/"as *;
+
+.patient{
+    width: 111.1%;
+    background-color: $primary-color;
+    transform: translateX(-5%);
+    padding: 5% 5% 40% 5%;
+    @include flex($direction:column,$justify:center,$align:center);
+    gap: 10px;
+    &__content{
+    @include flex($direction:column,$justify:center,$align:center);
+    text-align: center;
+    gap: 15px;
+    &-fistline{
+        @include font($primary-font,14px,$secondary-color,700);
+        @include tablet{
+            @include font($primary-font,20px,$secondary-color,700);
+        }
+        @include desktop{
+            @include font($primary-font,24px,$secondary-color,700);
+        }
+    }
+    &-secondline{
+        @include font($secondary-font,24px,black,800);
+        @include tablet{
+            @include font($secondary-font,36px,black,800);
+        }
+        @include desktop{
+            @include font($secondary-font,48px,black,800);
+        }
+    }
+    &-thirdline{
+        @include font($primary-font,12px,500);
+        @include color-text-opacity($number:0,$opacity:0.5);
+        width: 80%;
+        @include tablet{
+            @include font($primary-font,18px,500);
+        }
+        @include desktop{
+            @include font($primary-font,24px,500);
+        }
+        span{
+            display: block;
+            @include desktop{
+                display: inline;
+            }
+        }
+    }
+    }
+    &__image{
+        @include flex($direction:column,$align:center);
+     
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        &__vc{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    @include flex($direction:column,$justify:center,$align:center);
+    @include desktop{
+        @include flex($direction:row,$justify:space-between);
+        padding: 0 5%;
+    }
+       figure{
+        width: 150px;
+        @include tablet{
+            width: 250px;
+        }
+        @include desktop{
+            width: 20%;
+
+        }
+        img{
+            width: 100%;
+        }
+       }
+        }
+        &__card{
+            width: 320px;
+            z-index: 10;
+            margin-top: 10%;
+            @include flex($direction:column,$justify:center,$align:center);
+            @include desktop{
+                @include flex($direction:row,$justify:space-between);
+                margin-top: 7%;
+                width: 100%;
+            }
+            gap: 40px;
+            @include tablet{
+                width: 600px;
+                margin-top: 8%;
+                gap: 80px;
+            }
+        }
+
+    }
+}

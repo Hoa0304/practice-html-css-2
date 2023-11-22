@@ -1,0 +1,168 @@
+@use "../../abstracts/" as *;
+
+.reason{
+    padding-top: 20%;
+    width: 100%;
+    @include desktop{
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
+    &__content{
+        width: 100%;
+        @include desktop{
+            @include flex($justify:space-between);
+        }
+        &-first{
+            width: 80%;
+            @include font($primary-font,24px,$primary-color,700);
+            margin-bottom: 5%;
+            @include tablet{
+                @include font($primary-font,36px,$primary-color,700);
+            }
+            @include desktop{
+                @include font($primary-font,50px,$primary-color,700);
+                width: 40%;
+            }
+        }
+        &-second{
+            width: 95%;
+            margin-bottom: 15%;
+            @include font($primary-font,14px,400);
+            @include color-text-opacity($number:255,$opacity:0.5);
+            @include tablet{
+                @include font($primary-font,20px,400);
+            }
+            @include desktop{
+                @include font($primary-font,20px,400);
+                width: 40%;
+                margin-bottom: 0;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+    &__card{
+        @include flex($direction:column);
+        gap: 25px;
+        @include desktop{
+            @include flex($direction:row,$justify:space-between,$align:flex-end);
+        }
+        &-big{
+            width: 90%;
+            @include color-bg-opacity($number:196,$opacity:0.20);
+            padding: 5%;
+            border-radius: 20px 80px 20px 20px;
+            @include flex($direction:column);
+            gap: 20px;
+            @include tablet{
+                border-radius: 50px 150px 50px 50px;
+                width: 90%;
+                gap: 40px;
+            }
+            @include desktop{
+                width: 35%;
+                border-radius: 50px 150px 50px 50px;
+                gap: 50px;
+                padding: 3%;
+            }
+            &__image{
+                width: 20%;
+                border-radius: 10px;
+                padding: 3%;
+                box-shadow: 0 2px 3px 0 rgba(15, 15, 15, 0.6);
+                @include color-bg-opacity($number:196,$opacity:0.1);
+                img{
+                    width: 100%;
+                }
+                @include tablet{
+                    border-radius: 20px;
+                }
+            }
+            &__content{
+                @include flex($direction:column);
+                gap: 20px;
+                @include tablet{
+                    gap: 45px;
+                }
+                @include desktop{
+                    gap: 50px;
+                }
+                p{
+                    width: 100%;
+                    @include font($primary-font,14px,700);
+                    span{
+                        display: block;
+                    }
+                    @include tablet{
+                        @include font($primary-font,20px,700);
+                    }
+                    @include desktop{
+                        @include font($primary-font,24px,700);
+                    }
+                }
+                .title-first{
+                    width: 70%;
+                    @include font($secondary-font,14px,$secondary-color);
+                    @include tablet{
+                        width: 60%;
+                        @include font($secondary-font,20px,$secondary-color);
+                    }
+                    @include desktop{
+                        width: 80%;
+                        @include font($secondary-font,24px,$secondary-color);
+                    }
+                }
+                .title-second{
+                    @include font($primary-font,14px,$primary-color);
+                    @include tablet{
+                        width: 85%;
+                        @include font($primary-font,20px,$primary-color);
+                    }
+                    @include desktop{
+                        @include font($primary-font,18px,$primary-color);
+                    }
+                }
+
+            }
+            &__link{
+                @include flex($align:center);
+                @include font($primary-font,12px,$secondary-color,700);
+                @include tablet{
+                    @include font($primary-font,18px,$secondary-color,700);
+                }
+                @include desktop{
+                    @include font($primary-font,18px,$secondary-color,700);
+                }
+                figure{
+                    margin-top: 2%;
+                    margin-left: 2%;
+                    width: 9%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &-child{
+            width: 60%;
+            @include flex($direction:column);
+            gap: 25px;
+            margin-bottom: 10%;
+            @include tablet{
+                @include flex($justify:space-between,$direction:row);
+                width: 100%;
+            }
+            @include desktop{
+                height: 60%;
+                @include flex($direction:row,$justify:space-between);
+                width: 60%;
+                margin-bottom: 0;
+                .cardrs{
+                    width: 46%;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use "../abstracts/" as *;
+
+.cardrs{
+    border: 3px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    padding: 8%;
+    width: 100%;
+    @include flex($direction:column);
+    gap: 35px;
+    @include tablet{
+        padding: 5%;
+        border-radius: 40px;
+    }
+    @include desktop{
+        border-radius: 50px;
+        padding: 7%;
+    }
+    &__image{
+        width: 50px;
+        padding: 4%;
+        @include color-bg-opacity($number:196,$opacity:0.1);
+        border-radius: 10px;
+        height: 50px;
+        img{
+           width: 100%;
+           height: 100%;
+        }
+        @include desktop{
+            padding: 1%;
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+        }
+    }
+    &__text{
+        @include font($primary-font,14px,$primary-color,700);
+        @include tablet{
+            @include font($primary-font,20px,$primary-color,700);
+        }
+        @include desktop{
+            @include font($primary-font,24px,$primary-color,700);
+        }
+    }
+    &__link{
+        @include flex($align:center);
+        text-decoration: none;
+        @include font($secondary-font,14px,700);
+        @include color-text-opacity($number:255,$opacity:0.5);
+        @include tablet{
+            @include font($secondary-font,20px,700);
+        }
+        @include desktop{
+            @include font($secondary-font,24px,700);
+        }
+        figure{
+            width: 12%;
+            margin-top: 2%;
+            margin-left: 2%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,240 @@
+@use "../../abstracts/" as *;
+
+.information{
+    background-color: $primary-color;
+    width: 111.1%;
+    transform: translateX(-5%);
+    text-align: center;
+    padding: 10% 5%;
+    @include flex($direction:column,$justify:center,$align:center);
+    @include tablet{
+        @include flex($align:flex-start);
+        text-align: left;
+    }
+    @include desktop{
+        @include flex($direction:row,$align:space-between,$justify:space-between);
+        text-align: left;
+        flex-wrap: wrap;
+        padding: 5% 5%;
+        &__title{
+          order: 1;
+        }
+        &__image{
+ order: 2;
+        }
+        &__form{
+order: 1;
+        }
+    }
+    &__title{
+        @include font($primary-font,24px,black,700);
+        width: 100%;
+        margin-bottom: 5%;
+        @include tablet{
+            @include font($primary-font,36px,black,700);
+        }
+        @include desktop{
+            @include font($primary-font,48px,black,700);
+            width: 60%;
+            margin-bottom: 0;
+        }
+    }
+    &__image{
+        position: relative;
+        margin-bottom: 10%;
+        @include desktop{
+            margin-bottom: 0%;
+        }
+        figure{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        &-button{
+            position: absolute;
+            bottom: 10%;
+            @include font($primary-font,14px,$primary-color,700);
+            @include tablet{
+            @include font($primary-font,20px,$primary-color,700);
+            padding: 4% 8%;
+            }
+            @include desktop{
+                @include font($primary-font,20px,$primary-color,700);
+                padding: 4% 8%;
+            }
+            @include color-bg-opacity($number:196,$opacity:0.25);
+            padding: 4% 12%;
+            border-radius: 10px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+    &__form{
+        @include flex($direction:column,$justify:flex-start,$align:flex-start);
+        text-align: left;
+        gap: 20px;
+        @include desktop{
+            margin-top: 2%;
+            width: 55%;
+        }
+        &-first--text{
+            @include font($primary-font,14px,black,700);
+            @include tablet{
+                @include font($primary-font,20px,black,700);
+            }
+            @include desktop{
+                @include font($primary-font,24px,black,700);
+            }
+        }
+        &-input{
+            width: 100%;
+            padding: 5%;
+            border-radius: 10px;
+            border: none;
+            background-color:rgba(11, 21, 60, 0.15);
+            @include font($primary-font,14px,500);
+            @include tablet{
+                @include font($primary-font,20px,500);
+                border-radius: 20px;
+            }
+            @include desktop{
+                @include font($primary-font,24px,500);
+                border-radius: 20px;
+                padding: 3%;
+            }
+        }
+        &-input::placeholder{
+            @include color-text-opacity($number:0,$opacity:0.25);
+            @include font($primary-font,14px,500);
+            @include tablet{
+                @include font($primary-font,20px,500);
+            }
+            @include desktop{
+                @include font($primary-font,24px,500);
+            }
+        }
+        &-second--text{
+            @include font($primary-font,14px,500);
+            @include tablet{
+                @include font($primary-font,20px,500);
+            }
+            @include desktop{
+                @include font($primary-font,24px,500);
+            }
+            @include color-text-opacity($number:0,$opacity:0.5);
+            width: 90%;
+        }
+        &-group{
+            width: 100%;
+            @include tablet{
+                @include flex($direction:row,$justify:space-between);
+                width: 100%;
+            }
+            @include desktop{
+                @include flex($direction:row,$justify:space-between);
+                width: 100%;
+            }
+            &-input{
+                width: 100%;
+                @include flex($align:center);
+                padding: 2% 0 2% 5%;
+                border-radius: 10px;
+                background-color: rgba(11, 21, 60, 0.15);
+                height: 100%;
+                margin-bottom: 5%;
+                gap: 10px;
+                @include tablet{
+                    width: 65%;
+                    padding: 1% 0 1% 5%;
+                    border-radius: 20px;
+                }
+                @include desktop{
+                    padding: 1% 0 1% 5%;
+                    border-radius: 20px;
+                    width: 65%;
+                }
+                .input-phonenum{
+                    background-color: rgba(225, 227, 231, 0.15);
+                    border: none;
+                    height: 100%;
+                    padding: 5% 6%;
+                    @include font($primary-font,14px,500);
+                   @include tablet{
+                    @include font($primary-font,20px,500);
+                   }
+                   @include desktop{
+                    @include font($primary-font,24px,500);
+                   }
+                }
+                .input-phonenum:focus { 
+                    border: none;
+                    outline: none;
+                    
+                }
+                .input-phonenum::placeholder{
+                    @include color-text-opacity($number:0,$opacity:0.25);
+                }
+                .input-phonenum:active{
+                    border: none;
+                    outline: none;
+                }
+                .arrow{
+                    border-right: 1px solid rgba(0, 0, 0, 0.3);
+                    padding-right: 5%;
+                }
+            }
+            .buttonvrf{
+                background-color: $secondary-color;
+                padding: 5% 20%;
+                @include font($primary-font,14px,$primary-color,700);
+                border-radius: 10px;
+                margin-bottom: 5%;
+                @include tablet{
+                    @include font($primary-font,20px,$primary-color,700);
+                    padding: 1% 10%;
+                    border-radius: 20px
+                }
+                @include desktop{
+                    @include font($primary-font,24px,$primary-color,700);
+                    padding: 1% 10%;
+                    border-radius: 20px
+                }
+            }
+        }
+        .btn-submit{
+            @include font($primary-font,14px,$primary-color,700);
+            background-color: $secondary-color;
+            padding: 4%;
+            border-radius: 10px;
+            width: 100%;
+            @include tablet{
+                @include font($primary-font,20px,$primary-color,700);
+                border-radius: 20px;
+            }
+            @include desktop{
+                @include font($primary-font,24px,$primary-color,700);
+                border-radius: 20px;
+            }
+        }
+        &__ques{
+            width: 100%;
+            @include flex($justify:space-around,$align:center);
+            .ques{
+                @include font($primary-font,14px,700);
+                @include tablet{
+                    @include font($primary-font,20px,700);
+                }
+                @include desktop{
+                    @include font($primary-font,24px,700);
+                }
+            }
+            .ques-first{
+                @include color-text-opacity($number:0,$opacity:0.5);
+            }
+            .ques-second{
+                color: $secondary-color;
+            }
+        }
+    }
+}

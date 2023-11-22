@@ -1,0 +1,11 @@
+<each loop="item in {{list}}">
+    <div class="child">
+        <figure class="child__img">
+            <img src="../assets/icons/{{item.linkimage}}.svg" alt="{{item.alts}}">
+        </figure>
+        <div class="child__content">
+            <span class="child__content-first">{{item.firstcontent}}</span>
+            <span class="child__content-secondary">{{item.secondarycontent}}</span>
+        </div>
+    </div>
+</each>

@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.divvirus{
+    @include flex($justify:space-between,$align:space-between);
+    width: 100%;
+}

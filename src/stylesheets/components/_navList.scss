@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+ul{
+    display: inline-flex;
+    gap: 20px;
+    li{
+        position: relative;
+        a{
+            @include font($primary-font,24px,500);
+            @include color-text-opacity($number:255,$opacity:0.5);
+        }
+        &:nth-child(1){
+            position: relative;
+            a{
+                @include font($primary-font,24px,$primary-color);
+            }
+           }
+           &:nth-child(1)::after{
+              position: absolute;
+              content: "";
+              @include button($width:10px,$height:10px,$background-color:$secondary-color,$border-radius:50%);
+              bottom: -30%;
+              left: 50%;
+              transform: translateX(-50%);
+           }
+    }
+    li:hover{
+        a{
+            color: $primary-color;
+        }
+    }
+    li:hover::after{
+        position: absolute;
+        content: "";
+        @include button($width:10px,$height:10px,$background-color:$secondary-color,$border-radius:50%);
+        bottom: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+}
