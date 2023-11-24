@@ -60,6 +60,7 @@
         @include flex($justify:center,$align:center);
         .imageperson--fg{
             z-index: 0;
+            transform: translateY(5%);
             width: 225px;
             height: 170px;
             @include tablet{
