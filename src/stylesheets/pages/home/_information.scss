@@ -27,14 +27,14 @@ order: 1;
         }
     }
     &__title{
-        @include font($primary-font,24px,black,700);
+        @include font($secondary-font,24px,black,200);
         width: 100%;
         margin-bottom: 5%;
         @include tablet{
-            @include font($primary-font,36px,black,700);
+            @include font($secondary-font,36px,black,200);
         }
         @include desktop{
-            @include font($primary-font,48px,black,700);
+            @include font($secondary-font,48px,black,200);
             width: 60%;
             margin-bottom: 0;
         }
@@ -42,8 +42,10 @@ order: 1;
     &__image{
         position: relative;
         margin-bottom: 10%;
+        @include flex($align:center,$justify:center);
         @include desktop{
             margin-bottom: 0%;
+            transform: translateY(-15%);
         }
         figure{
             width: 100%;
@@ -66,8 +68,6 @@ order: 1;
             @include color-bg-opacity($number:196,$opacity:0.25);
             padding: 4% 12%;
             border-radius: 10px;
-            right: 50%;
-            transform: translateX(50%);
         }
     }
     &__form{
@@ -103,6 +103,9 @@ order: 1;
                 border-radius: 20px;
                 padding: 3%;
             }
+        }
+        &-input:focus{
+            outline: none;
         }
         &-input::placeholder{
             @include color-text-opacity($number:0,$opacity:0.25);
@@ -201,6 +204,7 @@ order: 1;
                     border-radius: 20px
                 }
             }
+
         }
         .btn-submit{
             @include font($primary-font,14px,$primary-color,700);
@@ -227,6 +231,9 @@ order: 1;
                 }
                 @include desktop{
                     @include font($primary-font,24px,700);
+                }
+                &:hover{
+                text-decoration: underline;
                 }
             }
             .ques-first{

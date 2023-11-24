@@ -152,11 +152,14 @@
             </figure>
             <div class="virusdescription">
                 <div class="grid">
-                   
-                    <include src="./components/imagelist.html" locals='{
-                        "list": "[`High Fever`,`Loss sense of taste`,`Dry Cough`,`Difficulty Breathing`,`Loss sense of smell`,`Sore Throat`]"
-                    }'></include>
+                   <include src="./components/divvirus.html" locals='{
+
+                    "list":[{"contentfist":"High Fever","contentsecond":"Loss of sense of taste"},
+                    {"contentfist":"Loss sense of smell","contentsecond":"Difficulty Breathing"},
+                    {"contentfist":"Dry cough","contentsecond":"Sore Throat"}]
+                   }'>
                     
+                   </include>
                 </div>
             </div>
            
@@ -179,13 +182,6 @@
             </p>
         </div>
         <div class="patient__image">
-            <div class="patient__image__vc">
-                <include src="./components/covid.html" locals='{
-                    "list":["covid","covid","covid"]
-                }'>
-                    
-                </include>
-            </div>
             <div class="patient__image__card">
                 <include src="./components/cardhtml.html" locals='{
                     "list":[{"personlink":"F1","firstline":"Oyindamola Maja","secondline":"Badagry, Lagos","titlefirst":"\"Been stressing about a close centre to get the","titlespan":"covid-19","titlesecond":"vaccine, until i tried Vaccination.ng\""},

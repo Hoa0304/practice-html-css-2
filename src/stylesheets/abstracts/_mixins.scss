@@ -64,7 +64,7 @@
 @mixin bg-img($bg: "") {
   background-image: url($bg);
   background-size: cover;
-  background-clip: border-box;
+  background-repeat: no-repeat;
 }
 @mixin color-text-opacity($number,$opacity){
 color:rgba($number,$number,$number,$opacity);

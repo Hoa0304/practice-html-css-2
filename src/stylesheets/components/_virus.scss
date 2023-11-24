@@ -3,15 +3,15 @@
 .virus{
     position: relative;
     @include flex($align:center);
-    width: 100%;
+   
     figure{
         width: 40px;
         z-index: 0;
         @include tablet{
-            width: 50px;
+            width: 70px;
         }
         @include desktop{
-            width: 70px;
+            width: 90px;
         }
         img{
             width: 100%;
@@ -22,16 +22,20 @@
         @include color-bg-opacity($number:196,$opacity:0.2);
         @include font($primary-font,9px,$secondary-color,600);
         text-wrap: nowrap;
-        padding: 5% 5%;
+        padding: 8px;
         border-radius: 5px;
-        margin-left: -4%;
+        margin-left: -6%;
         @include tablet{
             @include font($primary-font,18px,$secondary-color,600);
-            padding: 3% 4%;
+            padding: 10px 40px;
+            margin-left: -8%;
+            border-radius: 15px
         }
         @include desktop{
             @include font($primary-font,20px,$secondary-color,600);
-            padding: 2% 4%;
+            padding: 20px 60px;
+            border-radius: 20px;
+            margin-left: -12%;
         }
     }
 }

@@ -25,7 +25,7 @@
             border-radius: 20px 20px 0 0;
             @include font($secondary-font,24px,$primary-color,700);
             text-align: left;
-            padding: 2%;
+            padding: 2% 10% ;
         }
     }
     &__form{
@@ -87,6 +87,7 @@
             button{
                 width: 45%;
                 padding: 5%;
+                border: 3px solid $secondary-color;
                 border-radius: 10px;
                 @include color-bg-opacity($number:196,$opacity:0.1);
                 a{

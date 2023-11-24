@@ -1,20 +1,20 @@
 <each loop="item in {{list}}">
-    <article class="cardhtml">
-        <div class="cardhtml__information">
-            <figure class="cardhtml__information-avt">
-                <img src="../assets/icons/person{{item.personlink}}.svg" alt="person">
-            </figure>
-            <div class="cardhtml__information__text">
-                <p class="cardhtml__information__text-fistline">{{item.firstline}}</p>
-                <p class="cardhtml__information__text-secondline">{{item.secondline}}</p>
+    <article class="cardinfor">
+        <div class="cardhtml">
+            <div class="cardhtml__information">
+                <figure class="cardhtml__information-avt">
+                    <img src="../assets/icons/person{{item.personlink}}.svg" alt="person">
+                </figure>
+                <div class="cardhtml__information__text">
+                    <p class="cardhtml__information__text-fistline">{{item.firstline}}</p>
+                    <p class="cardhtml__information__text-secondline">{{item.secondline}}</p>
+                </div>
+            </div>
+            <div class="cardhtml__comment">
+                <p class="cardhtml__comment-title">
+                    {{item.titlefirst}}
+                    <span>{{item.titlespan}}</span>
+                    {{item.titlesecond}}
+                </p>
             </div>
         </div>
-        <div class="cardhtml__comment">
-            <p class="cardhtml__comment-title">
-                {{item.titlefirst}}
-                <span>{{item.titlespan}}</span>
-                {{item.titlesecond}}
-            </p>
-        </div>
-    </article>
-</each>

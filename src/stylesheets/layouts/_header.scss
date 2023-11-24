@@ -89,6 +89,7 @@
             gap:4%;
         }
         &--content {
+        width: 100%;
             @include flex($direction:column,$justify: center,$align:flex-start);
             @include desktop{
                 width: 60%;
@@ -106,7 +107,8 @@
                 &--primary{
                     @include font($secondary-font,24px,$primary-color,600);
                     margin-top: 6%;
-                    width: 90%;
+                    margin-bottom: 6%;
+                    width: 70%;
                     @include tablet {
                         @include font($secondary-font,36px,$primary-color,800);
                         width: 70%;
@@ -131,6 +133,7 @@
                 &--opacity {
                     @include font($primary-font,14px,rgba(255, 255, 255, 0.70),700);
                     margin-bottom: 12%;
+                    width: 80%;
                     @include tablet {
                         @include font($primary-font,20px,rgba(255, 255, 255, 0.70),800);
                         width: 70%;
@@ -189,31 +192,31 @@
                 img{
                     width: 100%;
                 }
-                img:nth-child(3) {
-                    @include tablet {
-                        display: none;
-                    }
-                    @include desktop {
-                        display: none;
-                    }
-                }
-                img:nth-child(1){
-                    display: none;
-                    @include desktop {
-                        display: block;
-                        width:100%;
-                    }
+                // img:nth-child(3) {
+                //     @include tablet {
+                //         display: none;
+                //     }
+                //     @include desktop {
+                //         display: none;
+                //     }
+                // }
+                // img:nth-child(1){
+                //     display: none;
+                //     @include desktop {
+                //         display: block;
+                //         width:100%;
+                //     }
                    
-                }
-                img:nth-child(2){
-                    display: none;
-                    @include tablet{
-                        display: block;
-                    }
-                    @include desktop{
-                        display: none;
-                    }
-                }
+                // }
+                // img:nth-child(2){
+                //     display: none;
+                //     @include tablet{
+                //         display: block;
+                //     }
+                //     @include desktop{
+                //         display: none;
+                //     }
+                // }
             }
         }
     }
