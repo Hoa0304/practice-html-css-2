@@ -1,7 +1,7 @@
 @use "../../abstracts/" as *;
 
     .schedule{
-    padding: 10% 0 0 0;
+    padding: 5% 0 0 0;
     &__title{
         margin-bottom: 10%;
         @include tablet{
