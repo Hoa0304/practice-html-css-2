@@ -13,7 +13,8 @@
     }
     @include desktop{
         border-radius: 50px;
-        padding: 7%;
+        padding: 5%;
+        @include flex($align:space-between,$justify:space-between);
     }
     &__image{
         width: 50px;
@@ -50,10 +51,10 @@
             @include font($secondary-font,20px,700);
         }
         @include desktop{
-            @include font($secondary-font,24px,700);
+            @include font($secondary-font,18px,700);
         }
         figure{
-            width: 12%;
+            width: 10%;
             margin-top: 2%;
             margin-left: 2%;
             img{
